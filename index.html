@@ -1,45 +1,6 @@
-<!DOCTYPE html>
-<html>
-
 <head>
-  <meta charset="utf-8">
-  <title>Redirecting...</title>
-  <script src="https://cdn.staticfile.org/jquery/1.9.0/jquery.js"></script>
-  <script type="text/javascript" charset="utf-8">
-    $(function () {
-      window.location.replace("https://www.harkin.cn");
-      $.fn.typewriter = function () {
-        this.each(function () {
-          var $ele = $(this),
-            str = $ele.html(),
-            sum = 0;
-          $ele.html("");
-          var timer = setInterval(function () {
-            var current = str.substr(sum, 1);
-            if (current == '<') {
-              sum = str.indexOf('>', sum) + 1;
-            } else {
-              sum++;
-            }
-            var curr = str.substr(0, sum);
-            $ele.html(curr + (sum & 1 ? '_' : ''));
-            if (sum >= str.length) {
-              clearInterval(timer);
-            }
-          }, 50);
-        });
-        return this;
-      };
-      $("#code").typewriter();
-    })
-  </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- 以下方式定时转到页面 -->
+    <meta http-equiv="Refresh" content="0; url=https://www.harkin.cn">
 </head>
-
-<body>
-  <div style="font-family: monospace;" id="code">
-    PS> Start-Process -FilePath www.harkin.cn
-    <br />
-  </div>
-</body>
-
-</html>
